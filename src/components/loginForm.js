@@ -6,7 +6,7 @@ export default function loginForm(props) {
         <div>
             <h2 className="loginTitle">Login</h2>
             <form
-
+                onSubmit={props.onSubmit.bind(this)}
             
             >
                 <h3 className="loginFields">Username:</h3>

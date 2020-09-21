@@ -6,6 +6,7 @@ import {ReactComponent as BellIcon} from '../icons/bell.svg'
 import {ReactComponent as MsgIcon} from '../icons/messenger.svg'
 import {ReactComponent as CaretIcon} from '../icons/caret.svg'
 import {ReactComponent as Home} from '../icons/home.svg'
+import {ReactComponent as UserIcon} from '../icons/user.svg'
 
 
 
@@ -29,15 +30,16 @@ export default function Navbar() {
                 <Navitem
                     //props
                     icon= {<BellIcon/>}
+                    
                 />
                 <Navitem
                     //props
                     icon= {<Home/>}
-                    onClick= {()=> window.location.href='/'}
+                    name="Home"
                 />
                 <Navitem
                     //props
-                    icon= {<CaretIcon/>}
+                    icon= {<UserIcon/>}
                 >
                     {/*Dropdown */}
                     <Dropdown/>

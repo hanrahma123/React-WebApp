@@ -9,7 +9,10 @@ import Background from '../components/background'
 
 export class login extends Component {
     state= {
-        items:[],
+        login:[
+            {username:'aa'},
+            {password:''}
+        ],
         buttons:[
             {
             key:1,
@@ -17,9 +20,21 @@ export class login extends Component {
             }
         ],
     }
-    click(key){
-        window.location.href='/about';
+    click(key){                             //click is attatched to every 'Button'
+        window.location.href='/about';      //PLACEHOLDER
     }
+    onSubmit(e){
+        e.preventDefault();
+        
+
+        const login = {                           //extracted form field values to JSON object
+            username: e.target.username.value,  
+            password: e.target.password.value
+        }
+       //add aws cognito call here
+
+    }
+    
     render() {
         return (
             <div>
@@ -27,9 +42,10 @@ export class login extends Component {
             <LoginBackground 
                 //props
                 buttons={this.state.buttons} 
-                click = {this.click}   
+                click = {this.click}  
+                onSubmit={this.onSubmit} 
             />
-            {/* <Background></Background> */}
+            
         </div>
         )
     }

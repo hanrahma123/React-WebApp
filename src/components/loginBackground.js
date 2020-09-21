@@ -8,6 +8,7 @@ export class loginBackground extends Component {
             <LoginForm
                 buttons={this.props.buttons}
                 click={this.props.click}
+                onSubmit={this.props.onSubmit}
             ></LoginForm>
             </div>
         )

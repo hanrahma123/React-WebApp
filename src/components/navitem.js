@@ -11,8 +11,12 @@ export default function Navitem(props) {
                 <a 
                     href='#'
                     className="icon-button" 
-                    onClick={()=> setOpen(!open)}   
+                    onClick={()=> {
+                        setOpen(!open)
+                        if(props.name=== 'Home'){window.location.href='/'; }  //conditional links for icons
+                    }}   
                 >   
+                    
                     {props.icon}
                     
                 </a>

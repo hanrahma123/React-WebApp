@@ -130,16 +130,20 @@ a{
 .navbar{
   height: var(--nav-size);
   background-color: var(--bg);
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   border-bottom: var(--border);
   background-color: var(--bg);
+  /* display: flex; */
+  
 }
 
 .navbar-nav{
   max-width: 100%;
+  /* width: 100%; */
   height: 100%;
   display: flex;
   justify-content: flex-end;
+  margin-left: 0;
 
 }
 
@@ -150,6 +154,8 @@ a{
   /* align-content: top; */
   display: flex;
   margin-right: auto;
+  padding-left: 0px;
+  margin-left: 0px;
   background-color: var(--bg-accent);
 }
 .koolaButton{
@@ -187,6 +193,23 @@ a{
   align-items: center;
   justify-content: center;
   
+  
+ 
+}
+.icon-r{
+  --button-size: calc(var(--nav-size)*0.5);
+  width: var(--button-size);
+  height: var(--button-size);
+  background-color: var(--bg-accent);
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  
  
 }
 
@@ -223,13 +246,12 @@ a{
   padding: 0.5rem;
   
 }
+
 .menu-item:hover{
   background-color: #525357;
 }
 
-.icon-right{
-  margin-left: auto;
-}
+
 
 .menu{
   width: 100%;
