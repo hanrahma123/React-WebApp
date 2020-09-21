@@ -1,0 +1,38 @@
+:root{
+    --bg: #242526;
+    --bg-accent: #484a4d;
+    --text-color: #dadce1;
+    --nav-size: 60px;
+    --border: 1px solid #474a3d;
+    --border-radius: 8px;
+    --speed: 500ms;
+    
+}
+
+.loginBackground{
+    display: flex;
+    /* align-self: center; */
+    background-color: var(--bg);
+    width: 30rem;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
+    border:none;
+    flex: column;
+    justify-content: center;
+}
+
+.loginTitle{
+    color: white;
+    margin: 1rem;
+    text-decoration: underline;
+}
+
+.loginFields{
+    color: white;
+    margin: 1rem;
+}
+
+.forgotPassword{
+    font: 16px;
+}
