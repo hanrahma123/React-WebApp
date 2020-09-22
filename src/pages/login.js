@@ -3,7 +3,7 @@ import '../Style/App.css';
 import '../Style/login.css';
 import Navbar from '../components/navbar';
 import LoginBackground from '../components/loginBackground'
-import Background from '../components/background'
+// import Background from '../components/background'
 
 
 
@@ -27,11 +27,11 @@ export class login extends Component {
         e.preventDefault();
         
 
-        const login = {                           //extracted form field values to JSON object
-            username: e.target.username.value,  
-            password: e.target.password.value
-        }
-       //add aws cognito call here
+    //     const login = {                           //extracted form field values to JSON object
+    //         username: e.target.username.value,  
+    //         password: e.target.password.value
+    //     }
+    //    //add aws cognito call here
 
     }
     

@@ -3,8 +3,8 @@ import Navitem from './navitem';
 import Dropdown from './dropdown';
 import {ReactComponent as PlusIcon} from '../icons/plus.svg'
 import {ReactComponent as BellIcon} from '../icons/bell.svg'
-import {ReactComponent as MsgIcon} from '../icons/messenger.svg'
-import {ReactComponent as CaretIcon} from '../icons/caret.svg'
+// import {ReactComponent as MsgIcon} from '../icons/messenger.svg'
+// import {ReactComponent as CaretIcon} from '../icons/caret.svg'
 import {ReactComponent as Home} from '../icons/home.svg'
 import {ReactComponent as UserIcon} from '../icons/user.svg'
 
@@ -15,12 +15,13 @@ export default function Navbar() {
         <nav className="navbar">
             
             <ul className="navbar-nav">
-                <div className="koolaMoola">
+                
+                <li className="koolaMoola">
                     <button 
                         className="koolaButton"
                         onClick={ ()=> window.location.href='/'}
-                    >KoolaMoola</button>
-                </div>
+                    >[KoolaMoola]</button>
+                </li>
                 
                 <Navitem
                     //props

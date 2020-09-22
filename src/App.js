@@ -6,8 +6,9 @@ import Navbar from './components/navbar';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import about from './pages/about';
 import login from './pages/login';
-import Spinner from 'react-bootstrap/Spinner';
-import PageLoader from './components/pageLoader';
+import NavbarLeft from './components/navbar_left';
+// import Spinner from 'react-bootstrap/Spinner';
+// import PageLoader from './components/pageLoader';
 // import {ReactComponent as ArrowIcon } from './icons/arrow.svg'
 
 
@@ -21,37 +22,36 @@ function App() {
       <Route exact path="/" render={props => (
       
         <React.Fragment>
-         
-          <Navbar/>
+          <div className="flexbox0">
           
+          <NavbarLeft/>
           <div className='flexbox1'>
-              <div className='background'>
+          <Navbar/>
+              {/* <div className='background'>
                 <Background/>
                 
-              </div>
+              </div> */}
+              
               <div className='flexbox2'> 
 
                 <h4 className="welcometxt">Welcome User</h4>
                 {/* <ArrowIcon className="chart"/> */}
                 <div className="flexdata">
-                  <img src= 'https://www.betterevaluation.org/sites/default/files/styles/feature_image/public/piechart_0.gif?itok=l0_8fFn1' className="pichart"/>
-                  <img src= 'https://images.pond5.com/2d-bar-chart-black-background-footage-105279605_iconl.jpeg' className="barchart"/>
+                  <img src= 'https://www.betterevaluation.org/sites/default/files/styles/feature_image/public/piechart_0.gif?itok=l0_8fFn1' alt="" className="pichart"/>
+                  <img src= 'https://images.pond5.com/2d-bar-chart-black-background-footage-105279605_iconl.jpeg' alt="" className="barchart"/>
                 </div>
-                <div className='flexbox3'>
-                <h4 className="welcometxt">Welcome User</h4>
-                <h4 className="welcometxt">Welcome User</h4>
-                <h4 className="welcometxt">Welcome User</h4>
-                <h4 className="welcometxt">Welcome User</h4>
-                <h4 className="welcometxt">Welcome User</h4>
-                <h4 className="welcometxt">Welcome User</h4>
-                {/* <Spinner animation="border" role="status">
-                  <span className="sr-only">Loading...</span>
-                </Spinner> */}
-                  {/* ADD links at bottom and login link page */}
-            
-                  </div>
+                  <div className='flexbox3'>
+                  <h4 className="welcometxt">Welcome User</h4>
+                  <h4 className="welcometxt">Welcome User</h4>
+                  <h4 className="welcometxt">Welcome User</h4>
+                  <h4 className="welcometxt">Welcome User</h4>
+                  <h4 className="welcometxt">Welcome User</h4>
+                  <h4 className="welcometxt">Welcome User</h4>
+                            
+                </div>
                 
               </div>
+          </div>
           </div>
         </React.Fragment>
         )}

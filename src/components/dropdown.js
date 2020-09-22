@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {ReactComponent as CogIcon } from '../icons/cog.svg'
-import {ReactComponent as ChrevronIcon } from '../icons/chevron.svg'
+// import {ReactComponent as ChrevronIcon } from '../icons/chevron.svg'
 import {ReactComponent as ArrowIcon } from '../icons/arrow.svg'
 import {ReactComponent as LoginIcon} from '../icons/login.svg'
 import {CSSTransition} from 'react-transition-group'

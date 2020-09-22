@@ -1,13 +1,14 @@
 :root{
-    --bg: #242526;
-    --bg-accent: #484a4d;
-    --text-color: #dadce1;
+    --bg:#04fc4c;
+    --bg-accent: white;
+    --text-color:#474a3d;
     --nav-size: 60px;
     --border: 1px solid #474a3d;
     --border-radius: 8px;
     --speed: 500ms;
+    --font: 'Roboto', sans-serif;
     
-}
+  }
 
 .loginBackground{
     display: flex;
@@ -29,7 +30,7 @@
 }
 
 .loginFields{
-    color: white;
+    color: var(--text-color);
     margin: 1rem;
 }
 
