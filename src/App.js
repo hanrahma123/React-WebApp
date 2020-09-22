@@ -6,18 +6,22 @@ import Navbar from './components/navbar';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import about from './pages/about';
 import login from './pages/login';
-
+import Spinner from 'react-bootstrap/Spinner';
+import PageLoader from './components/pageLoader';
 // import {ReactComponent as ArrowIcon } from './icons/arrow.svg'
 
 
 function App() {
   return (
+    
     <Router>
       
       <div className="App">
-      <Route exact path="/" render={props => (
 
+      <Route exact path="/" render={props => (
+      
         <React.Fragment>
+         
           <Navbar/>
           
           <div className='flexbox1'>
@@ -40,9 +44,13 @@ function App() {
                 <h4 className="welcometxt">Welcome User</h4>
                 <h4 className="welcometxt">Welcome User</h4>
                 <h4 className="welcometxt">Welcome User</h4>
+                {/* <Spinner animation="border" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner> */}
                   {/* ADD links at bottom and login link page */}
             
                   </div>
+                
               </div>
           </div>
         </React.Fragment>
