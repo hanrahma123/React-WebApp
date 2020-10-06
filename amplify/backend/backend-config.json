@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "webconsole53d95129": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

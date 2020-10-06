@@ -1,6 +1,6 @@
 /*overrides*/
 html, body {
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
 }
@@ -10,28 +10,33 @@ html, body {
   --bg:#04fc4c;
   --bg-accent: white;
   --text-color:#474a3d;
-  --nav-size: 60px;
+  --nav-size: 5vh;
   --border: 1px solid #474a3d;
   --border-radius: 8px;
   --speed: 500ms;
   --font: 'Roboto', sans-serif;
+  --left-nav-width: 5vw;
   font-family: var(--font);
   padding: 0;
   margin: 0;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 main{
   margin: 5rem;
   padding: 1rem;
+  
 }
 
 body::-webkit-scrollbar{
-  width: 0.5rem;
-
+  width: .5rem; 
+  height: 0.5rem;
 }
+
 body::-webkit-scrollbar-track{
   background: var(--text-color);
+  
 }
 body::-webkit-scrollbar-thumb{
   background: var(--bg);
@@ -49,9 +54,9 @@ a{
   text-align: center;
   background:#d6e4e9;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   margin-right:0;
-  overflow: hidden;
+  
 }
 
 .App-logo {
@@ -77,7 +82,7 @@ a{
 
 .navbarleft{
   position: fixed;
-  width:5rem;
+  width:var(--left-nav-width);
   height: 100vh;
   background-color: var(--text-color);
   z-index: 1000;
@@ -105,7 +110,7 @@ a{
 .navbarleftItem{
   margin-top: calc(var(--nav-size)*0.1);
   width: 100%;
-  margin-left: 2rem;
+  margin-left: calc(var(--left-nav-width)*0.3);
   
   
 }
@@ -136,7 +141,8 @@ a{
 .flexbox0{
   display: flex;
   flex-direction: row;
-  
+  /* min-height: 100vh; */
+  height: inherit;  /*debug*/
   
 
 }
@@ -144,7 +150,7 @@ a{
 .flexbox1{
   
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: inherit;
   flex-direction: column;
   
@@ -154,12 +160,13 @@ a{
 .flexbox2{
   display: flex;
   /* flex: 4; */
-  margin-left: 5rem;
+  margin-left: var(--left-nav-width);
+  /* margin-right: var(--left-nav-width); */
   margin-top: var(--nav-size);
   flex-direction: column;
-  width: inherit;
-  height: auto;
-  overflow: hidden;
+  width: calc(100% - var(--left-nav-width));
+  height: inherit;
+  /* overflow: hidden; */
 
 }
 
@@ -223,13 +230,15 @@ a{
 
 .navbar{
   position: fixed;
-  width: inherit;
+  /* width: 100%; */
+  width: calc(100% - var(--left-nav-width));
   height: var(--nav-size);
   background-color: var(--bg);
   padding: 0;
   /* border-bottom: var(--border); */
   background-color: var(--bg);
   /* display: flex; */
+  margin-left: var(--left-nav-width);
   
 }
 
@@ -258,7 +267,7 @@ a{
   padding-left: 0px;
   margin-left: 0px;
   background-color: var(--bg-accent);
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
 }
 .koolaButton{
   
@@ -278,7 +287,7 @@ a{
 }
 
 .nav-item{
-  width: calc(var(--nav-size)*0.8);
+  width: calc(var(--nav-size));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,7 +295,7 @@ a{
 }
 
 .icon-button{
-  --button-size: calc(var(--nav-size)*0.5);
+  --button-size: calc(var(--left-nav-width)*0.5);  /*debug: fix this scalar later (weird for small screens)*/
   width: var(--button-size);
   height: var(--button-size);
   background-color: var(--bg-accent);
@@ -421,3 +430,6 @@ a{
   margin: 15px
 }
 
+.signoutButton{
+  margin-top: auto;
+}

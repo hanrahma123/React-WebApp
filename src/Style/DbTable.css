@@ -1,0 +1,21 @@
+:root{
+    --left-nav-width: 5vw;
+}
+.table1{
+    border-collapse: collapse;
+    /* width: calc(100% - var(--left-nav-width)); */
+    margin-left: 1vw;
+    margin-right: 1vw;
+    
+}
+
+td,th{
+    border: 1px solid gray;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: gray;
+    color: white;
+}
